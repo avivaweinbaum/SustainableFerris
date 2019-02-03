@@ -7,6 +7,7 @@
     body {
       font-family: "Courier New", Courier, monospace;
       text-align: center;
+      font-size: 20px;
     }
     button {
       background-color: #ADD8E6;
@@ -14,15 +15,20 @@
       font-size: 30px;
       padding: 25px;
     }
-    .total {
-      padding: 25px;
+    .title {
+      font-size: 50px;
+      font-weight: 700;
+    }
+    #total {
+      margin-top: 50px;
+      font-size: 40px;
     }
 
   </style>
 
   <body>
 
-    <h1>Make Ferris Sustainable</h1>
+    <div class="title">Make Ferris Sustainable</div>
     <p>Ferris Dining Hall gives out single-use paper plates and bowls, as well as plastic cups and utensils. This is not sustainable or good for the environment! Track how much you throw out, and see how much you use every day.</p>
 
     <button onclick="plateFunction()">Paper plate</button>
@@ -30,30 +36,39 @@
     <button onclick="forkFunction()">Fork</button>
     <button onclick="spoonFunction()">Spoon</button>
     <button onclick="knifeFunction()">Knife</button>
-    <div class='total'></div>
+    <div id='total'><h3></h3></div>
 
   <script>
   
   var total = 0;
+
   function plateFunction() {
   total += 19;
-    console.log("Total: " + total);
+  console.log("Total: " + total); 
+  document.getElementById('total').innerHTML = "Your total is " + total + " grams. Let's get that lower!";
+ }
+  function bowlFunction() {
+  total += 23;
+  console.log("Total: " + total);
+  document.getElementById('total').innerHTML = "Your total is " + total + " grams. Let's get that lower!";
+ 
   }
-
-/*  'button'.addEventListener("click", addTotal);
-  function addTotal() {
-    var theTotal = 0;
-    console.log("Hello there!");
-    theTotal + 'value';
+  function forkFunction() {
+  total += 9;
+  console.log("Total: " + total); 
+  document.getElementById('total').innerHTML = "Your total is " + total + " grams. Let's get that lower!"; 
+ }
+  function spoonFunction() {
+  total += 10;
+  console.log("Total: " + total);
+  document.getElementById('total').innerHTML = "Your total is " + total + " grams. Let's get that lower!";
+ 
   }
-
-
-    $('button').click(function(){
-       theTotal = Number(theTotal) + Number($(this).val());
-    $('.total').text("Total: "+theTotal);        
-    });
-    $('.total').text("Total: "+theTotal);
-  }*/
+  function knifeFunction() {
+  total += 8;
+  console.log("Total: " + total);
+  document.getElementById('total').innerHTML = "Your total is " + total + " grams. Let's get that lower!";
+  }
 
   </script>
   </body>
