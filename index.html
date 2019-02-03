@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sustainable Ferris</title>
+  <style>
+
+    body {
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+    }
+    button {
+      background-color: #ADD8E6;
+      border-radius: 10px;
+      font-size: 30px;
+      padding: 25px;
+    }
+    .total {
+      padding: 25px;
+    }
+
+  </style>
+
+  <body>
+
+    <h1>Make Ferris Sustainable</h1>
+    <p>Ferris Dining Hall gives out single-use paper plates and bowls, as well as plastic cups and utensils. This is not sustainable or good for the environment! Track how much you throw out, and see how much you use every day.</p>
+
+    <button onclick="plateFunction()">Paper plate</button>
+    <button onclick="bowlFunction()">Paper bowl</button>
+    <button onclick="forkFunction()">Fork</button>
+    <button onclick="spoonFunction()">Spoon</button>
+    <button onclick="knifeFunction()">Knife</button>
+    <div class='total'></div>
+
+  <script>
+  
+  var total = 0;
+  function plateFunction() {
+  total += 19;
+    console.log("Total: " + total);
+  }
+
+/*  'button'.addEventListener("click", addTotal);
+  function addTotal() {
+    var theTotal = 0;
+    console.log("Hello there!");
+    theTotal + 'value';
+  }
+
+
+    $('button').click(function(){
+       theTotal = Number(theTotal) + Number($(this).val());
+    $('.total').text("Total: "+theTotal);        
+    });
+    $('.total').text("Total: "+theTotal);
+  }*/
+
+  </script>
+  </body>
+</html> 
